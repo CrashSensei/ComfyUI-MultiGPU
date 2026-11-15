@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> **This is a fork of the original repository that was archived on 30 September 2026. It is no longer maintained.**
+> **This is a fork of the original repository that was archived on 30 September 2026. Maintenance and support are on a best-effort only level.**
 
 # ComfyUI-MultiGPU v2: Universal .safetensors and GGUF Multi-GPU Distribution with DisTorch
 <p align="center">
