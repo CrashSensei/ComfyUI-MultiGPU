@@ -566,7 +566,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "0d6dfc7524472943ba912a6ec3088757edba15c3",
         "Node name for S&R": "UNETLoaderMultiGPU"
       },
@@ -603,7 +603,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "0d6dfc7524472943ba912a6ec3088757edba15c3",
         "Node name for S&R": "DualCLIPLoaderMultiGPU"
       },
@@ -665,7 +665,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "0d6dfc7524472943ba912a6ec3088757edba15c3",
         "Node name for S&R": "VAELoaderMultiGPU"
       },

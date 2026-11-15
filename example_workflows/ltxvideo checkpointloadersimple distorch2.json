@@ -362,7 +362,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "0d6dfc7524472943ba912a6ec3088757edba15c3",
         "Node name for S&R": "CheckpointLoaderSimpleDisTorch2MultiGPU"
       },
@@ -489,7 +489,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "0d6dfc7524472943ba912a6ec3088757edba15c3",
         "Node name for S&R": "CLIPLoaderMultiGPU"
       },
@@ -598,7 +598,7 @@
       "title": "ComfyUI-MultiGPU Note - CheckpointLoaderSimpleDisTorch2",
       "properties": {},
       "widgets_values": [
-        "An LTXVideo workflow using a simple UNet DisTorch to test the CheckpointLoaderSimpleDisTorch2 node. In this case we are using the DisTorch2 node to statically allocate 100% of the main UNet model on to the second video card, `cuda:1`.\n\n## Custom Node\n- [ComfyUI-MultiGPU](https://github.com/crashsensei/ComfyUI-MultiGPU)\n```\n📂 ComfyUI/\n├── 📂 custom_nodes/\n│   ├── 📂 ComfyUI-MultiGPU/\n```\n## Model links\n\n**Checkpoint**\n- [ltx-video-2b-v0.9.5.safetensors](https://huggingface.co/Lightricks/LTX-Video/blob/main/ltx-video-2b-v0.9.5.safetensors)\n\n**CLIP**\n- [t5xxl_fp16.safetensors](https://huggingface.co/Comfy-Org/mochi_preview_repackaged/blob/main/split_files/text_encoders/t5xxl_fp16.safetensors)\n\nModel Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 checkpoints/\n│   │   ├── ltx-video-2b-v0.9.5.safetensors[🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪]\n│   ├── 📂 clip/\n│   │   └── t5xxl_fp16.safetensors\n```\n\n```\n🖥️ Device Mapping\n├── 🟢 cuda:0\n│       └── ltx-video-2b-v0.9.5.safetensors[]\n├── 🟣 cuda:1\n│       └── ltx-video-2b-v0.9.5.safetensors[🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪]\n├── ⚙️ cpu\n        └── t5xxl_fp16.safetensors\n```"
+        "An LTXVideo workflow using a simple UNet DisTorch to test the CheckpointLoaderSimpleDisTorch2 node. In this case we are using the DisTorch2 node to statically allocate 100% of the main UNet model on to the second video card, `cuda:1`.\n\n## Custom Node\n- [ComfyUI-MultiGPU](https://github.com/crashsensei/ComfyUI-MultiGPU)\n```\n📂 ComfyUI/\n├── 📂 custom_nodes/\n│   ├── 📂 ComfyUI-MultiGPUs/\n```\n## Model links\n\n**Checkpoint**\n- [ltx-video-2b-v0.9.5.safetensors](https://huggingface.co/Lightricks/LTX-Video/blob/main/ltx-video-2b-v0.9.5.safetensors)\n\n**CLIP**\n- [t5xxl_fp16.safetensors](https://huggingface.co/Comfy-Org/mochi_preview_repackaged/blob/main/split_files/text_encoders/t5xxl_fp16.safetensors)\n\nModel Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 checkpoints/\n│   │   ├── ltx-video-2b-v0.9.5.safetensors[🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪]\n│   ├── 📂 clip/\n│   │   └── t5xxl_fp16.safetensors\n```\n\n```\n🖥️ Device Mapping\n├── 🟢 cuda:0\n│       └── ltx-video-2b-v0.9.5.safetensors[]\n├── 🟣 cuda:1\n│       └── ltx-video-2b-v0.9.5.safetensors[🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪]\n├── ⚙️ cpu\n        └── t5xxl_fp16.safetensors\n```"
       ],
       "color": "#008181",
       "bgcolor": "rgba(24,24,27,.9)"

@@ -3,7 +3,7 @@
 
 # ComfyUI-MultiGPU v2: Universal .safetensors and GGUF Multi-GPU Distribution with DisTorch
 <p align="center">
-  <img src="https://raw.githubusercontent.com/crashsensei/ComfyUI-MultiGPU/main/assets/distorch_average.png" width="600">
+  <img src="https://raw.githubusercontent.com/crashsensei/ComfyUI-MultiGPUs/main/assets/distorch_average.png" width="600">
   <br>
   <em>Free almost all of your GPU for what matters: Maximum latent space processing</em>
 </p>
@@ -19,7 +19,7 @@
 <h1 align="center">DisTorch: How It Works</h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/crashsensei/ComfyUI-MultiGPU/main/assets/distorch2_0.gif" width="800">
+  <img src="https://raw.githubusercontent.com/crashsensei/ComfyUI-MultiGPUs/main/assets/distorch2_0.gif" width="800">
   <br>
   <em>DisTorch 2.0 in Action</em>
 </p>
@@ -47,7 +47,7 @@ What is DisTorch? Standing for "distributed torch", the DisTorch nodes in this c
 - Allows **you** to easily shift from ___on-device speed___ to ___open-device latent space capability___ with a simple one-number change
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/crashsensei/ComfyUI-MultiGPU/main/assets/distorch_node.png" width="400">
+  <img src="https://raw.githubusercontent.com/crashsensei/ComfyUI-MultiGPUs/main/assets/distorch_node.png" width="400">
   <br>
   <em>DisTorch Nodes with one simple number to tune its Vitual VRAM to your needs</em>
 </p>
@@ -60,7 +60,7 @@ On current ComfyUI builds with DynamicVRAM/comfy-aimdo enabled, MultiGPU keeps D
 ⚙️ Expert users: Like .gguf or exl2/3 LLM loaders, use the expert_mode_alloaction for exact allocations of model shards on as many devices as your setup has!
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/crashsensei/ComfyUI-MultiGPU/main/assets/distorch2_0.png" width="300">
+  <img src="https://raw.githubusercontent.com/crashsensei/ComfyUI-MultiGPUs/main/assets/distorch2_0.png" width="300">
   <br>
   <em>The new Virtual VRAM even lets you offload ALL of the model and still run compute on your CUDA device!</em>
 </p>

@@ -67,7 +67,7 @@ class WanVideoModelLoader:
     RETURN_TYPES = ("WANVIDEOMODEL", "MULTIGPUDEVICE",)
     RETURN_NAMES = ("model", "compute_device",)
     FUNCTION = "loadmodel"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
 
     def loadmodel(self, model, base_precision, compute_device, quantization, load_device, **kwargs):
         from . import set_current_device
@@ -139,7 +139,7 @@ class WanVideoSampler:
     RETURN_TYPES = ("LATENT", "LATENT",)
     RETURN_NAMES = ("samples", "denoised_samples",)
     FUNCTION = "process"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
     DESCRIPTION = "MultiGPU-aware sampler that ensures correct device for each model"
 
     def process(self, model, compute_device, **kwargs):
@@ -196,7 +196,7 @@ class WanVideoTextEncode:
     RETURN_TYPES = ("WANVIDEOTEXTEMBEDS", )
     RETURN_NAMES = ("text_embeds",)
     FUNCTION = "process"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
     DESCRIPTION = "Encodes text prompts into text embeddings. For rudimentary prompt travel you can input multiple prompts separated by '|', they will be equally spread over the video length"
 
     def process(self, positive_prompt, negative_prompt, t5=None, load_device=None,force_offload=True, model_to_offload=None, use_disk_cache=False):
@@ -240,7 +240,7 @@ class LoadWanVideoT5TextEncoder:
     RETURN_TYPES = ("WANTEXTENCODER", "MULTIGPUDEVICE")
     RETURN_NAMES = ("wan_t5_model", "load_device")
     FUNCTION = "loadmodel"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
     DESCRIPTION = "Loads Wan text_encoder model from 'ComfyUI/models/LLM'"
 
     def loadmodel(self, model_name, precision, device=None, quantization="disabled"):
@@ -278,7 +278,7 @@ class LoadWanVideoClipTextEncoder:
     RETURN_TYPES = ("CLIP_VISION", "MULTIGPUDEVICE")
     RETURN_NAMES = ("wan_clip_vision", "load_device")
     FUNCTION = "loadmodel"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
     DESCRIPTION = "Loads Wan clip_vision model from 'ComfyUI/models/clip_vision'"
 
     def loadmodel(self, model_name, precision, device=None):
@@ -321,7 +321,7 @@ class WanVideoTextEncodeCached:
     RETURN_NAMES = ("text_embeds", "negative_text_embeds", "positive_prompt")
     OUTPUT_TOOLTIPS = ("The text embeddings for both prompts", "The text embeddings for the negative prompt only (for NAG)", "Positive prompt to display prompt extender results")
     FUNCTION = "process"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
     DESCRIPTION = """Encodes text prompts into text embeddings. This node loads and completely unloads the T5 after done, leaving no VRAM or RAM imprint."""
 
 
@@ -358,7 +358,7 @@ class WanVideoTextEncodeSingle:
     RETURN_TYPES = ("WANVIDEOTEXTEMBEDS", )
     RETURN_NAMES = ("text_embeds",)
     FUNCTION = "process"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
     DESCRIPTION = "Encodes text prompt into text embedding."
 
     def process(self, prompt, t5=None, load_device=None, force_offload=True, model_to_offload=None, use_disk_cache=False):
@@ -398,7 +398,7 @@ class WanVideoVAELoader:
     RETURN_TYPES = ("WANVAE", "MULTIGPUDEVICE",)
     RETURN_NAMES = ("vae", "load_device",)
     FUNCTION = "loadmodel"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
     DESCRIPTION = "Loads Wan VAE model from 'ComfyUI/models/vae'"
 
     def loadmodel(self, model_name, load_device=None, precision="fp16", compile_args=None):
@@ -430,7 +430,7 @@ class WanVideoTinyVAELoader:
     RETURN_TYPES = ("WANVAE","MULTIGPUDEVICE")
     RETURN_NAMES = ("vae", "load_device")
     FUNCTION = "loadmodel"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
     DESCRIPTION = "Loads Wan VAE model from 'ComfyUI/models/vae_approx'"
 
     def loadmodel(self, model_name, load_device=None, precision="fp16", parallel=False):
@@ -462,7 +462,7 @@ class WanVideoBlockSwap:
     RETURN_TYPES = ("BLOCKSWAPARGS",)
     RETURN_NAMES = ("block_swap_args",)
     FUNCTION = "setargs"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
     DESCRIPTION = "Extends Wan block swap with explicit device selection"
 
     def setargs(self, swap_device=None, **kwargs):
@@ -500,7 +500,7 @@ class WanVideoImageToVideoEncode:
     RETURN_TYPES = ("WANVIDIMAGE_EMBEDS",)
     RETURN_NAMES = ("image_embeds",)
     FUNCTION = "process"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
 
     def process(self, width, height, num_frames, force_offload, noise_aug_strength,
                     start_latent_strength, end_latent_strength, start_image=None, end_image=None, control_embeds=None, fun_or_fl2v_model=False,
@@ -564,7 +564,7 @@ class WanVideoDecode:
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("images",)
     FUNCTION = "decode"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
 
     def decode(self, vae, load_device, samples, enable_vae_tiling, tile_x, tile_y, tile_stride_x, tile_stride_y, normalization="default"):
         from . import set_current_device
@@ -608,7 +608,7 @@ class WanVideoVACEEncode:
     RETURN_TYPES = ("WANVIDIMAGE_EMBEDS", )
     RETURN_NAMES = ("vace_embeds",)
     FUNCTION = "process"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
 
     def process(self, vae, load_device, width, height, num_frames, strength, vace_start_percent, vace_end_percent, input_frames=None, ref_images=None, input_masks=None, prev_vace_embeds=None, tiled_vae=False):
         from . import set_current_device
@@ -650,7 +650,7 @@ class WanVideoEncode:
     RETURN_TYPES = ("LATENT",)
     RETURN_NAMES = ("samples",)
     FUNCTION = "encode"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
 
     def encode(self, vae, load_device, image, enable_vae_tiling, tile_x, tile_y, tile_stride_x, tile_stride_y, noise_aug_strength=0.0, latent_strength=1.0, mask=None):
         from . import set_current_device
@@ -692,7 +692,7 @@ class WanVideoClipVisionEncode:
     RETURN_TYPES = ("WANVIDIMAGE_CLIPEMBEDS",)
     RETURN_NAMES = ("image_embeds",)
     FUNCTION = "process"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
 
     def process(self, clip_vision, load_device, image_1, strength_1, strength_2, force_offload, crop, combine_embeds, image_2=None, negative_image=None, tiles=0, ratio=1.0):
         from . import set_current_device
@@ -728,7 +728,7 @@ class WanVideoControlnetLoader:
     RETURN_TYPES = ("WANVIDEOCONTROLNET",)
     RETURN_NAMES = ("controlnet", )
     FUNCTION = "loadmodel"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
     DESCRIPTION = "MultiGPU-aware ControlNet loader for WanVideo models"
 
     def loadmodel(self, model, base_precision, load_device, quantization, device):
@@ -755,7 +755,7 @@ class FantasyTalkingModelLoader:
     RETURN_TYPES = ("FANTASYTALKINGMODEL",)
     RETURN_NAMES = ("model", )
     FUNCTION = "loadmodel"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
     DESCRIPTION = "MultiGPU-aware FantasyTalking model loader"
 
     def loadmodel(self, model, base_precision, device):
@@ -783,7 +783,7 @@ class Wav2VecModelLoader:
     RETURN_TYPES = ("WAV2VECMODEL",)
     RETURN_NAMES = ("wav2vec_model", )
     FUNCTION = "loadmodel"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
     DESCRIPTION = "MultiGPU-aware Wav2Vec model loader"
 
     def loadmodel(self, model, base_precision, load_device, device):
@@ -816,7 +816,7 @@ class DownloadAndLoadWav2VecModel:
     RETURN_TYPES = ("WAV2VECMODEL",)
     RETURN_NAMES = ("wav2vec_model", )
     FUNCTION = "loadmodel"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
     DESCRIPTION = "MultiGPU-aware downloadable Wav2Vec model loader"
 
     def loadmodel(self, model, base_precision, load_device, device):
@@ -852,7 +852,7 @@ class WanVideoUni3C_ControlnetLoader:
     RETURN_TYPES = ("WANVIDEOCONTROLNET",)
     RETURN_NAMES = ("controlnet", )
     FUNCTION = "loadmodel"
-    CATEGORY = "multigpu/WanVideoWrapper"
+    CATEGORY = "multigpus/WanVideoWrapper"
 
     def loadmodel(self, model, base_precision, load_device, device, quantization, attention_mode, compile_args=None):
         from . import set_current_device

@@ -133,7 +133,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "ba0a3a6e21b0a7f54bd24c51419a8e85b9217c3f",
         "Node name for S&R": "WanVideoTextEncodeMultiGPU"
       },
@@ -187,7 +187,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "ba0a3a6e21b0a7f54bd24c51419a8e85b9217c3f",
         "Node name for S&R": "WanVideoDecodeMultiGPU"
       },
@@ -338,7 +338,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "ba0a3a6e21b0a7f54bd24c51419a8e85b9217c3f",
         "Node name for S&R": "WanVideoSamplerMultiGPU"
       },
@@ -567,7 +567,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "ba0a3a6e21b0a7f54bd24c51419a8e85b9217c3f",
         "Node name for S&R": "WanVideoVAELoaderMultiGPU"
       },
@@ -660,7 +660,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "ba0a3a6e21b0a7f54bd24c51419a8e85b9217c3f",
         "Node name for S&R": "WanVideoModelLoaderMultiGPU"
       },
@@ -757,7 +757,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "ba0a3a6e21b0a7f54bd24c51419a8e85b9217c3f",
         "Node name for S&R": "LoadWanVideoT5TextEncoderMultiGPU"
       },
@@ -789,7 +789,7 @@
       "title": "ComfyUI-MultiGPU Note - ComfyUI-WanVideoWrapper",
       "properties": {},
       "widgets_values": [
-        "These nodes are designed to work with ComfyUI-WanVideoWrapper they enable UNets, CLIPs, and VAEs to be loaded  on any available device. This is a replication of the original workflow by kijai which can be found here: [wanvideo_1_3B_control_lora_example_01.json](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_control_lora_example_01.json)\n\n## Custom Node\n- [ComfyUI-MultiGPU](https://github.com/crashsensei/ComfyUI-MultiGPU)\n- [ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)\n```\n📂 ComfyUI/\n├── 📂 custom_nodes/\n│   ├── 📂 ComfyUI-MultiGPU/\n│   ├── 📂 ComfyUI-WanVideoWrapper\n```\n## Model links\n\n**Diffusion model**\n- [wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/blob/main/split_files/diffusion_models/wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors)\n- [wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/blob/main/split_files/diffusion_models/wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors)\n\n**CLIP**\n- [umt5_xxl_enc-bf16.safetensors](https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/umt5-xxl-enc-bf16.safetensors)\n\n**VAE**\n- [wan_2.1_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/blob/main/split_files/vae/wan_2.1_vae.safetensors)\n\n**LoRA**\n- [wan2.1-1.3b-control-lora-tile-v1.1_comfy.safetensors](https://huggingface.co/spacepxl/Wan2.1-control-loras/resolve/main/1.3b/tile/wan2.1-1.3b-control-lora-tile-v1.1_comfy.safetensors)\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 clip/\n│   │   └── umt5_xxl_enc-bf16.safetensors\n│   ├── 📂 unet/\n│   │   ├── wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors [🟩🟩🟩🟪🟪🟪🟪🟪🟪🟪]\n│   │   ├── wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors [🟩🟩🟩🟪🟪🟪🟪🟪🟪🟪]\n│   ├───📂 loras/\n│   │   ├── wan2.1-1.3b-control-lora-tile-v1.1_comfy.safetensors\n│   ├── 📂 vae/\n│   │   └── wan_2.1_vae.safetensors \n```\n## Device Mapping (Example: Two GPUs, 1 CPU)\n```\n🖥️ system \n├── 🟢 cuda:0\n│       └── wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors [🟩🟩🟩]\n│       └── wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors [🟩🟩🟩]\n│       └── high_noise_model.safetensors [🟩🟩🟩]\n│       └── low_noise_model.safetensors [🟩🟩🟩]\n│       └── umt5_xxl_fp8_e4m3fn_scaled.safetensors\n│       └── wan_2.1_vae.safetensors\n├── 🟣 cuda:1\n│       └── EMPTY\n├── ⚙️ cpu\n       └── wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors [🟪🟪🟪🟪🟪🟪🟪]\n       └── wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors [🟪🟪🟪🟪🟪🟪🟪]\n       └── high_noise_model.safetensors [🟪🟪🟪🟪🟪🟪🟪]\n       └── low_noise_model.safetensors [🟪🟪🟪🟪🟪🟪🟪]\n```"
+        "These nodes are designed to work with ComfyUI-WanVideoWrapper they enable UNets, CLIPs, and VAEs to be loaded  on any available device. This is a replication of the original workflow by kijai which can be found here: [wanvideo_1_3B_control_lora_example_01.json](https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_1_3B_control_lora_example_01.json)\n\n## Custom Node\n- [ComfyUI-MultiGPU](https://github.com/crashsensei/ComfyUI-MultiGPU)\n- [ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)\n```\n📂 ComfyUI/\n├── 📂 custom_nodes/\n│   ├── 📂 ComfyUI-MultiGPUs/\n│   ├── 📂 ComfyUI-WanVideoWrapper\n```\n## Model links\n\n**Diffusion model**\n- [wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/blob/main/split_files/diffusion_models/wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors)\n- [wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/blob/main/split_files/diffusion_models/wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors)\n\n**CLIP**\n- [umt5_xxl_enc-bf16.safetensors](https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/umt5-xxl-enc-bf16.safetensors)\n\n**VAE**\n- [wan_2.1_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/blob/main/split_files/vae/wan_2.1_vae.safetensors)\n\n**LoRA**\n- [wan2.1-1.3b-control-lora-tile-v1.1_comfy.safetensors](https://huggingface.co/spacepxl/Wan2.1-control-loras/resolve/main/1.3b/tile/wan2.1-1.3b-control-lora-tile-v1.1_comfy.safetensors)\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 clip/\n│   │   └── umt5_xxl_enc-bf16.safetensors\n│   ├── 📂 unet/\n│   │   ├── wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors [🟩🟩🟩🟪🟪🟪🟪🟪🟪🟪]\n│   │   ├── wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors [🟩🟩🟩🟪🟪🟪🟪🟪🟪🟪]\n│   ├───📂 loras/\n│   │   ├── wan2.1-1.3b-control-lora-tile-v1.1_comfy.safetensors\n│   ├── 📂 vae/\n│   │   └── wan_2.1_vae.safetensors \n```\n## Device Mapping (Example: Two GPUs, 1 CPU)\n```\n🖥️ system \n├── 🟢 cuda:0\n│       └── wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors [🟩🟩🟩]\n│       └── wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors [🟩🟩🟩]\n│       └── high_noise_model.safetensors [🟩🟩🟩]\n│       └── low_noise_model.safetensors [🟩🟩🟩]\n│       └── umt5_xxl_fp8_e4m3fn_scaled.safetensors\n│       └── wan_2.1_vae.safetensors\n├── 🟣 cuda:1\n│       └── EMPTY\n├── ⚙️ cpu\n       └── wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors [🟪🟪🟪🟪🟪🟪🟪]\n       └── wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors [🟪🟪🟪🟪🟪🟪🟪]\n       └── high_noise_model.safetensors [🟪🟪🟪🟪🟪🟪🟪]\n       └── low_noise_model.safetensors [🟪🟪🟪🟪🟪🟪🟪]\n```"
       ],
       "color": "#008181",
       "bgcolor": "rgba(24,24,27,.9)"
@@ -841,7 +841,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "ba0a3a6e21b0a7f54bd24c51419a8e85b9217c3f",
         "Node name for S&R": "WanVideoEncodeMultiGPU"
       },
