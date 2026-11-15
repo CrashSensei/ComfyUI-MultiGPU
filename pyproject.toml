@@ -5,13 +5,13 @@ version = "2.6.4"
 license = {file = "LICENSE"}
 
 [project.urls]
-Repository = "https://github.com/CrashSensei/ComfyUI-MultiGPU.git"
+Repository = "https://github.com/crashsenseiSensei/ComfyUI-MultiGPU.git"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = "pollockjj"
-DisplayName = "ComfyUI-MultiGPU"
-Icon = "https://raw.githubusercontent.com/CrashSensei/ComfyUI-MultiGPU/main/assets/multigpu_icon.png"
+PublisherId = "crashsensei"
+DisplayName = "ComfyUI-MultiGPU-CrashSensei"
+Icon = "https://raw.githubusercontent.com/crashsenseiSensei/ComfyUI-MultiGPU/main/assets/multigpu_icon.png"
 
 [tool.ruff]
 lint.select = [
