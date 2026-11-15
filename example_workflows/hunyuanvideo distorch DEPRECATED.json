@@ -378,7 +378,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "0d6dfc7524472943ba912a6ec3088757edba15c3",
         "Node name for S&R": "DualCLIPLoaderGGUFMultiGPU"
       },
@@ -417,7 +417,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "0d6dfc7524472943ba912a6ec3088757edba15c3",
         "Node name for S&R": "VAELoaderMultiGPU"
       },
@@ -495,7 +495,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "0d6dfc7524472943ba912a6ec3088757edba15c3",
         "Node name for S&R": "UnetLoaderGGUFDisTorchMultiGPU"
       },
@@ -528,7 +528,7 @@
       "title": "ComfyUI-MultiGPU Note - THIS WORKFLOW IS DEPRECATED. USE DISTORCH2 NODES",
       "properties": {},
       "widgets_values": [
-        "###THIS WORKFLOW IS DEPRECATED. USE DISTORCH2 NODES\n\nA DisTorch Hunyuan Video workflow with GGUF UNet DisTorch to test Hunyuan Video integration. In this case we are using the DisTorch2 node to statically allocate approximately half of the main UNet model to the cpu.\n\n## Custom Node\n- [ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF)\n- [ComfyUI-MultiGPU](https://github.com/crashsensei/ComfyUI-MultiGPU)\n```\n📂 ComfyUI/\n├── 📂 custom_nodes/\n│   ├── 📂 ComfyUI-GGUF/\n│   ├── 📂 ComfyUI-MultiGPU/\n```\n## Model links\n\n**Diffusion model**\n- [fast-hunyuan-video-t2v-720p-Q4_K_M.gguf](https://huggingface.co/city96/FastHunyuan-gguf/resolve/main/fast-hunyuan-video-t2v-720p-Q4_K_M.gguf)\n\n**CLIP**\n- [llava-llama-3-8B-v1_1-Q4_K_M.gguf](https://huggingface.co/city96/llava-llama-3-8b-v1_1-imat-gguf/resolve/main/llava-llama-3-8B-v1_1-Q4_K_M.gguf)\n\n**VAE**\n- [hunyuan_video_vae_bf16.safetensors](https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_bf16.safetensors)\n\nModel Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 clip/\n│   │   └── llava-llama-3-8B-v1_1-Q4_K_M.gguf\n│   │   └── clip_l.safetensors\n│   ├── 📂 unet/\n│   │   ├── fast-hunyuan-video-t2v-720p-Q4_K_M.gguf [🟩🟩🟩🟩🟪🟪🟪🟪🟪🟪]\n│   ├── 📂 vae/\n│   │   └── hunyuan_video_vae_bf16.safetensors\n```\n\n```\n🖥️ Device Mapping\n├── 🟢 cuda:0\n│       └── fast-hunyuan-video-t2v-720p-Q4_K_M.gguf [🟩🟩🟩🟩]\n├── 🟣 cuda:1\n│       └── fast-hunyuan-video-t2v-720p-Q4_K_M.gguf [🟪🟪🟪🟪🟪🟪]\n│       └── qwen_image_vae.safetensors\n├── ⚙️ cpu\n        └── llava-llama-3-8B-v1_1-Q4_K_M.gguf\n        └── clip_l.safetensors\n```"
+        "###THIS WORKFLOW IS DEPRECATED. USE DISTORCH2 NODES\n\nA DisTorch Hunyuan Video workflow with GGUF UNet DisTorch to test Hunyuan Video integration. In this case we are using the DisTorch2 node to statically allocate approximately half of the main UNet model to the cpu.\n\n## Custom Node\n- [ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF)\n- [ComfyUI-MultiGPU](https://github.com/crashsensei/ComfyUI-MultiGPU)\n```\n📂 ComfyUI/\n├── 📂 custom_nodes/\n│   ├── 📂 ComfyUI-GGUF/\n│   ├── 📂 ComfyUI-MultiGPUs/\n```\n## Model links\n\n**Diffusion model**\n- [fast-hunyuan-video-t2v-720p-Q4_K_M.gguf](https://huggingface.co/city96/FastHunyuan-gguf/resolve/main/fast-hunyuan-video-t2v-720p-Q4_K_M.gguf)\n\n**CLIP**\n- [llava-llama-3-8B-v1_1-Q4_K_M.gguf](https://huggingface.co/city96/llava-llama-3-8b-v1_1-imat-gguf/resolve/main/llava-llama-3-8B-v1_1-Q4_K_M.gguf)\n\n**VAE**\n- [hunyuan_video_vae_bf16.safetensors](https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_bf16.safetensors)\n\nModel Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 clip/\n│   │   └── llava-llama-3-8B-v1_1-Q4_K_M.gguf\n│   │   └── clip_l.safetensors\n│   ├── 📂 unet/\n│   │   ├── fast-hunyuan-video-t2v-720p-Q4_K_M.gguf [🟩🟩🟩🟩🟪🟪🟪🟪🟪🟪]\n│   ├── 📂 vae/\n│   │   └── hunyuan_video_vae_bf16.safetensors\n```\n\n```\n🖥️ Device Mapping\n├── 🟢 cuda:0\n│       └── fast-hunyuan-video-t2v-720p-Q4_K_M.gguf [🟩🟩🟩🟩]\n├── 🟣 cuda:1\n│       └── fast-hunyuan-video-t2v-720p-Q4_K_M.gguf [🟪🟪🟪🟪🟪🟪]\n│       └── qwen_image_vae.safetensors\n├── ⚙️ cpu\n        └── llava-llama-3-8B-v1_1-Q4_K_M.gguf\n        └── clip_l.safetensors\n```"
       ],
       "color": "#008181",
       "bgcolor": "rgba(24,24,27,.9)"

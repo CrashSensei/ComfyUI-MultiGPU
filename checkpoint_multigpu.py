@@ -290,7 +290,7 @@ class CheckpointLoaderAdvancedDisTorch2MultiGPU:
 
     RETURN_TYPES = ("MODEL", "CLIP", "VAE")
     FUNCTION = "load_checkpoint"
-    CATEGORY = "multigpu/distorch_2"
+    CATEGORY = "multigpus/distorch_2"
     TITLE = "Checkpoint Loader Advanced (DisTorch2)"
 
     def load_checkpoint(self, ckpt_name, unet_compute_device, unet_virtual_vram_gb, unet_donor_device,

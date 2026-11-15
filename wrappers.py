@@ -34,7 +34,7 @@ def _create_distorch_safetensor_v2_override(cls, device_param_name, device_sette
             inputs["optional"]["eject_models"] = ("BOOLEAN", {"default": eject_models_default})
             return inputs
 
-        CATEGORY = "multigpu/distorch_2"
+        CATEGORY = "multigpus/distorch_2"
         FUNCTION = "override"
         TITLE = f"{cls.TITLE if hasattr(cls, 'TITLE') else cls.__name__} (DisTorch2)"
 
@@ -187,7 +187,7 @@ def override_class_with_distorch_gguf(cls):
             inputs["optional"]["expert_mode_allocations"] = ("STRING", {"multiline": False, "default": ""})
             return inputs
 
-        CATEGORY = "multigpu/legacy"
+        CATEGORY = "multigpus/legacy"
         FUNCTION = "override"
         TITLE = f"{cls.TITLE if hasattr(cls, 'TITLE') else cls.__name__} (Legacy)"
 
@@ -256,7 +256,7 @@ def override_class_with_distorch_gguf_v2(cls):
             inputs["optional"]["expert_mode_allocations"] = ("STRING", {"multiline": False, "default": ""})
             return inputs
 
-        CATEGORY = "multigpu/distorch_2"
+        CATEGORY = "multigpus/distorch_2"
         FUNCTION = "override"
         TITLE = f"{cls.TITLE if hasattr(cls, 'TITLE') else cls.__name__} (DisTorch2)"
 

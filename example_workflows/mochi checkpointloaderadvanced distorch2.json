@@ -265,7 +265,7 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-multigpu",
+        "cnr_id": "comfyui-multigpus",
         "ver": "0d6dfc7524472943ba912a6ec3088757edba15c3",
         "Node name for S&R": "CheckpointLoaderAdvancedDisTorch2MultiGPU"
       },
@@ -304,7 +304,7 @@
       "title": "ComfyUI-MultiGPU - CheckpointLoaderAdvancedDisTorch2MultiGPU",
       "properties": {},
       "widgets_values": [
-        "A mochi all-in-one checkpoint to test ComfyUI-MultiGPU CheckpointLoaderAdvancedDisTorch2 functionality. In this case we are offloading 45% of the UNet, 55% of the CLIP, and assigning the VAE device independently\n## Custom Node\n\n- [ComfyUI-MultiGPU](https://github.com/crashsensei/ComfyUI-MultiGPU)\n```\n📂 ComfyUI/\n├── 📂 custom_nodes/\n│   ├── 📂 ComfyUI-MultiGPU/\n```\n## Model links\n\n**checkpoints**\n\n - [mochi_preview_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/mochi_preview_repackaged/blob/main/all_in_one/mochi_preview_fp8_scaled.safetensors) \n\n```\n📂 ComfyUI/\n├─ 📂 models/\n│   ├─ 📂 checkpoints/\n│   │     └── mochi_preview_fp8_scaled.safetensors  [🟩🟩🟩🟪🟪⚙️⚙️⚙️⚙️⚙️]\n```\n## Device Mapping (Example: Two GPUs, 1 CPU)\n```\n🖥️ system \n├── 🟢 cuda:0\n│       └── mochi_preview_fp8_scaled.safetensors - UNet [ 🟩🟩🟩]\n├── 🟣 cuda:1\n│       └── mochi_preview_fp8_scaled.safetensors - CLIP [🟪🟪]\n│       └── mochi_preview_fp8_scaled.safetensors - VAE\n├── ⚙️ cpu\n        └── mochi_preview_fp8_scaled.safetensors - UNET [⚙️⚙️⚙️]\n        └── mochi_preview_fp8_scaled.safetensors - CLIP [⚙️⚙️]\n```"
+        "A mochi all-in-one checkpoint to test ComfyUI-MultiGPU CheckpointLoaderAdvancedDisTorch2 functionality. In this case we are offloading 45% of the UNet, 55% of the CLIP, and assigning the VAE device independently\n## Custom Node\n\n- [ComfyUI-MultiGPU](https://github.com/crashsensei/ComfyUI-MultiGPU)\n```\n📂 ComfyUI/\n├── 📂 custom_nodes/\n│   ├── 📂 ComfyUI-MultiGPUs/\n```\n## Model links\n\n**checkpoints**\n\n - [mochi_preview_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/mochi_preview_repackaged/blob/main/all_in_one/mochi_preview_fp8_scaled.safetensors) \n\n```\n📂 ComfyUI/\n├─ 📂 models/\n│   ├─ 📂 checkpoints/\n│   │     └── mochi_preview_fp8_scaled.safetensors  [🟩🟩🟩🟪🟪⚙️⚙️⚙️⚙️⚙️]\n```\n## Device Mapping (Example: Two GPUs, 1 CPU)\n```\n🖥️ system \n├── 🟢 cuda:0\n│       └── mochi_preview_fp8_scaled.safetensors - UNet [ 🟩🟩🟩]\n├── 🟣 cuda:1\n│       └── mochi_preview_fp8_scaled.safetensors - CLIP [🟪🟪]\n│       └── mochi_preview_fp8_scaled.safetensors - VAE\n├── ⚙️ cpu\n        └── mochi_preview_fp8_scaled.safetensors - UNET [⚙️⚙️⚙️]\n        └── mochi_preview_fp8_scaled.safetensors - CLIP [⚙️⚙️]\n```"
       ],
       "color": "#008181",
       "bgcolor": "rgba(24,24,27,.9)"

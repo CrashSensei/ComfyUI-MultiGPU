@@ -1,17 +1,17 @@
 [project]
-name = "crashsensei-comfyui-multigpu"
-description = "Provides a suite of custom nodes to manage multiple GPUs for ComfyUI, including advanced model offloading for both GGUF and Safetensor formats with DisTorch, and bespoke MultiGPU support for WanVideoWrapper and other custom nodes."
+name = "comfyui-multigpus"
+description = "Provides a suite of custom nodes to manage multiple GPUs for ComfyUI, including advanced model offloading for both GGUF and Safetensor formats with DisTorch, and bespoke MultiGPUs support for WanVideoWrapper and other custom nodes."
 version = "2.6.4"
 license = {file = "LICENSE"}
 
 [project.urls]
-Repository = "https://github.com/crashsenseiSensei/ComfyUI-MultiGPU.git"
+Repository = "https://github.com/crashsenseiSensei/ComfyUI-MultiGPUs.git"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
 PublisherId = "crashsensei"
-DisplayName = "ComfyUI-MultiGPU-CrashSensei"
-Icon = "https://raw.githubusercontent.com/crashsenseiSensei/ComfyUI-MultiGPU/main/assets/multigpu_icon.png"
+DisplayName = "ComfyUI-MultiGPUs"
+Icon = "https://raw.githubusercontent.com/crashsenseiSensei/ComfyUI-MultiGPUs/main/assets/multigpu_icon.png"
 
 [tool.ruff]
 lint.select = [
