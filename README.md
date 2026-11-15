@@ -8,7 +8,7 @@
   <em>Free almost all of your GPU for what matters: Maximum latent space processing</em>
 </p>
 
-## The Core of ComfyUI-MultiGPU v2:
+## The Core of ComfyUI-MultiGPUs v2:
 [^1]: This **enhances memory management,** not parallel processing. Workflow steps still execute sequentially, but with components (in full or in part) loaded across your specified devices. *Performance gains* come from avoiding repeated model loading/unloading when VRAM is constrained. *Capability gains* come from offloading as much of the model (VAE/CLIP/UNet) off of your main **compute** device as possible—allowing you to maximize latent space for actual computation.
 
 1.  **Universal .safetensors Support**: Native DisTorch2 distribution for all `.safetensors` models.
@@ -67,11 +67,11 @@ On current ComfyUI builds with DynamicVRAM/comfy-aimdo enabled, MultiGPU keeps D
 
 ## Installation
 
-Installation via [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager) is preferred. Simply search for `ComfyUI-MultiGPU` in the list of nodes and follow installation instructions.
+Installation via [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager) is preferred. Simply search for `ComfyUI-MultiGPUs` in the list of nodes and follow installation instructions.
 
 ## Manual Installation
 
-Clone [this repository](https://github.com/pollockjj/ComfyUI-MultiGPU) inside `ComfyUI/custom_nodes/`.
+Clone [this repository](https://github.com/pollockjj/ComfyUI-MultiGPUs) inside `ComfyUI/custom_nodes/`.
 
 ## Nodes
 
@@ -147,7 +147,7 @@ Detailed technical documentation is available for all **automatically-detected c
 - **To access documentation**: Click on any core MultiGPU or DisTorch2 node in ComfyUI and select "Help" (question mark inside a circle) from the resultant menu 
 - **Coverage**: All standard ComfyUI loader nodes (UNet, VAE, Checkpoints, CLIP, ControlNet, Diffusers) plus popular GGUF loader variants
 - **Contents**: Input parameters with data types and descriptions, output specifications, usage examples, and DisTorch2 distributed loading explanations with allocation modes and strategies
-- **Note**: Documentation covers core ComfyUI-MultiGPU functionality only. Third-party custom node integrations (WanVideoWrapper, Florence2, etc.) have their own separate documentation.
+- **Note**: Documentation covers core ComfyUI-MultiGPUs functionality only. Third-party custom node integrations (WanVideoWrapper, Florence2, etc.) have their own separate documentation.
 
 ## Example workflows
 

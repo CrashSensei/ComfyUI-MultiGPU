@@ -333,10 +333,10 @@
       "mode": 0,
       "inputs": [],
       "outputs": [],
-      "title": "ComfyUI-MultiGPU - CheckpointLoaderAdvancedMultiGPU",
+      "title": "ComfyUI-MultiGPUs - CheckpointLoaderAdvancedMultiGPU",
       "properties": {},
       "widgets_values": [
-        "A mature SDXL Checkpoint to test ComfyUI-MultiGPU CheckpointLoaderAdvanced functionality. In this case we are changing the UNet, CLIP, and VAE devices independentlly\n## Custom Node\n\n- [ComfyUI-MultiGPU](https://github.com/crashsensei/ComfyUI-MultiGPU)\n```\n📂 ComfyUI/\n├── 📂 custom_nodes/\n│   ├── 📂 ComfyUI-MultiGPUs/\n```\n## Model links\n\n**checkpoints**\n\n - [Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors](https://huggingface.co/RunDiffusion/Juggernaut-XL-v9/resolve/main/Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors) \n\n```\n📂 ComfyUI/\n├─ 📂 models/\n│   ├─ 📂 checkpoints/\n│   │     └── Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors\n```\n## Device Mapping (Example: Two GPUs, 1 CPU)\n```\n🖥️ system \n├── 🟢 cuda:0\n│       └── Juggernaut-XL_v9_RunDiffusionPhoto_v2 - UNet\n├── 🟣 cuda:1\n│       └── Juggernaut-XL_v9_RunDiffusionPhoto_v2 - VAE\n├── ⚙️ cpu\n        └── Juggernaut-XL_v9_RunDiffusionPhoto_v2 - CLIP\n```"
+        "A mature SDXL Checkpoint to test ComfyUI-MultiGPUs CheckpointLoaderAdvanced functionality. In this case we are changing the UNet, CLIP, and VAE devices independentlly\n## Custom Node\n\n- [ComfyUI-MultiGPUs](https://github.com/crashsensei/ComfyUI-MultiGPUs)\n```\n📂 ComfyUI/\n├── 📂 custom_nodes/\n│   ├── 📂 ComfyUI-MultiGPUs/\n```\n## Model links\n\n**checkpoints**\n\n - [Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors](https://huggingface.co/RunDiffusion/Juggernaut-XL-v9/resolve/main/Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors) \n\n```\n📂 ComfyUI/\n├─ 📂 models/\n│   ├─ 📂 checkpoints/\n│   │     └── Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors\n```\n## Device Mapping (Example: Two GPUs, 1 CPU)\n```\n🖥️ system \n├── 🟢 cuda:0\n│       └── Juggernaut-XL_v9_RunDiffusionPhoto_v2 - UNet\n├── 🟣 cuda:1\n│       └── Juggernaut-XL_v9_RunDiffusionPhoto_v2 - VAE\n├── ⚙️ cpu\n        └── Juggernaut-XL_v9_RunDiffusionPhoto_v2 - CLIP\n```"
       ],
       "color": "#008181",
       "bgcolor": "rgba(24,24,27,.9)"

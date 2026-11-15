@@ -1,5 +1,5 @@
 """
-ComfyUI-MultiGPU Wrapper Functions
+ComfyUI-MultiGPUs Wrapper Functions
 All node override/wrapper generation functions consolidated in one location
 """
 
