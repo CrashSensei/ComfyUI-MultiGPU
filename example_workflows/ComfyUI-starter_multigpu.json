@@ -541,7 +541,7 @@
         }
       ],
       "properties": {
-        "aux_id": "pollockjj/ComfyUI-MultiGPU",
+        "aux_id": "crashsensei/ComfyUI-MultiGPU",
         "ver": "7af256ab6ea86b105777631fce116c4174547362",
         "Node name for S&R": "UNETLoaderMultiGPU"
       },
@@ -576,7 +576,7 @@
         }
       ],
       "properties": {
-        "aux_id": "pollockjj/ComfyUI-MultiGPU",
+        "aux_id": "crashsensei/ComfyUI-MultiGPU",
         "ver": "7af256ab6ea86b105777631fce116c4174547362",
         "Node name for S&R": "CLIPLoaderMultiGPU"
       },
